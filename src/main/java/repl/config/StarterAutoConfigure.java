@@ -9,27 +9,6 @@ import org.springframework.core.env.Environment;
 import repl.R;
 
 
-//=======================================================
-//		          .----.
-//		       _.'__    `.
-//		   .--(^)(^^)---/!\
-//		 .' @          /!!!\
-//		 :         ,    !!!!
-//		  `-..__.-' _.-\!!!/
-//		        `;_:    `"'
-//		      .'"""""`.
-//		     /,  ya ,\\
-//		    //狗神保佑\\
-//		    `-._______.-'
-//		    ___`. | .'___
-//		   (______|______)
-//=======================================================
-
-/**
- * [Zhihu]https://www.zhihu.com/people/Sweets07
- * [Github]https://github.com/MatrixSeven
- * Created by Seven on 2019-03-17 16:33
- */
 @Configuration
 @EnableConfigurationProperties(StarterServiceProperties.class)
 public class StarterAutoConfigure  {

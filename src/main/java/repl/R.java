@@ -13,29 +13,6 @@ import clojure.lang.RT;
 import java.util.Arrays;
 import java.util.List;
 
-
-//=======================================================
-//		          .----.
-//		       _.'__    `.
-//		   .--(^)(^^)---/!\
-//		 .' @          /!!!\
-//		 :         ,    !!!!
-//		  `-..__.-' _.-\!!!/
-//		        `;_:    `"'
-//		      .'"""""`.
-//		     /,  ya ,\\
-//		    //狗神保佑\\
-//		    `-._______.-'
-//		    ___`. | .'___
-//		   (______|______)
-//=======================================================
-
-/**
- * @author Seven
- * FileName: R.java
- * Created by Seven on 2019/11/12
- **/
-
 @Service
 @SuppressWarnings({"all"})
 public class R {
@@ -88,10 +65,11 @@ public class R {
         final boolean runMode = active.stream().anyMatch(mode::contains);
         if (starterServiceProperties.getState() && runMode) {
             Integer port = starterServiceProperties.getPort();
+            String bind = starterServiceProperties.getBind();
             Thread replThread = new Thread(() -> {
                 eval("(use '[clojure.tools.nrepl.server :only (start-server)])");
                 eval("(use '[cider.nrepl :only (cider-nrepl-handler)])");
-                eval("(def repl-server (start-server :port " + port + " :handler cider-nrepl-handler))");
+                eval("(def repl-server (start-server :port " + port + " :bind " + bind + " :handler cider-nrepl-handler))");
                 logger.info("Clojure nrepl is started on port(s): {} ", port);
                 logger.info("Clojure nrepl services running only on {} mode", mode);
             });

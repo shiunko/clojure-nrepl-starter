@@ -8,9 +8,9 @@
         <version>2.1.3.RELEASE</version>
         <relativePath/>
     </parent>
-    <groupId>com.github.matrixseven</groupId>
+    <groupId>com.github.shiunko</groupId>
     <artifactId>clojure-nrepl-starter</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>clojure-nrepl-starter</name>
     <description>Clojure Nrepl Starter</description>
     <properties>
