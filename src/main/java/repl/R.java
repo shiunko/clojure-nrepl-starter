@@ -69,7 +69,7 @@ public class R {
             Thread replThread = new Thread(() -> {
                 eval("(use '[clojure.tools.nrepl.server :only (start-server)])");
                 eval("(use '[cider.nrepl :only (cider-nrepl-handler)])");
-                eval("(def repl-server (start-server :port " + port + " :bind " + bind + " :handler cider-nrepl-handler))");
+                eval("(def repl-server (start-server :port " + port + " :bind \"" + bind + "\" :handler cider-nrepl-handler))");
                 logger.info("Clojure nrepl is started on port(s): {} ", port);
                 logger.info("Clojure nrepl services running only on {} mode", mode);
             });
